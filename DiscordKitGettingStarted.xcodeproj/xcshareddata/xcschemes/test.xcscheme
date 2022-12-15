@@ -57,6 +57,11 @@
             value = "$(TOKEN)"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "COMMAND_GUILD_ID"
+            value = "964741354112577557"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
