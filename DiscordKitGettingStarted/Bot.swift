@@ -14,6 +14,10 @@ public struct Bot {
     static let bot = Client(intents: .unprivileged)
 
     public static func main() {
+        bot.ready.listen {
+            print("Successfully logged in as \(bot.user!.username)#\(bot.user!.discriminator)!")
+        }
+
         // Login to Discord's API
         bot.login()
 
