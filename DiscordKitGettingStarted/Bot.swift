@@ -11,12 +11,22 @@ import DiscordKitBot // Import the DiscordKit module for all the wonders contain
 /// The main entrypoint of our Discord bot
 @main
 public struct Bot {
+    private static let HELLO_MESSAGES = [
+        "Hello, World!",
+        "Helloooo! I can hear you!",
+        "Who's there?",
+        "Beep, boop, I'm a bot.",
+        "I'm alive!"
+    ]
+
     static let bot = Client(intents: .unprivileged)
 
     private static func registerSlashCommands() async throws {
         try await bot.registerApplicationCommands(guild: ProcessInfo.processInfo.environment["COMMAND_GUILD_ID"]) {
             NewAppCommand("hello", description: "Get a nice hello message") { interaction in
                 print("Received hello interaction!")
+                // Reply with a random hello message
+                try? await interaction.reply(HELLO_MESSAGES.randomElement()!)
             }
         }
     }
