@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA4BC3C42949AA9100074918 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BC3C32949AA9100074918 /* main.swift */; };
+		DA4BC3C42949AA9100074918 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BC3C32949AA9100074918 /* Bot.swift */; };
 		DA4BC3CC2949ACB900074918 /* DiscordKitBot in Frameworks */ = {isa = PBXBuildFile; productRef = DA4BC3CB2949ACB900074918 /* DiscordKitBot */; };
 /* End PBXBuildFile section */
 
@@ -24,9 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA486922294ACCD000174D5F /* DiscordKitConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DiscordKitConfig.xcconfig; sourceTree = "<group>"; };
 		DA4BC3C02949AA9100074918 /* DiscordKitGettingStarted */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiscordKitGettingStarted; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA4BC3C32949AA9100074918 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		DA4BC3CD2949F76900074918 /* DiscordToken.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DiscordToken.xcconfig; sourceTree = "<group>"; };
+		DA4BC3C32949AA9100074918 /* Bot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		DA4BC3B72949AA9100074918 = {
 			isa = PBXGroup;
 			children = (
-				DA4BC3CD2949F76900074918 /* DiscordToken.xcconfig */,
+				DA486922294ACCD000174D5F /* DiscordKitConfig.xcconfig */,
 				DA4BC3C22949AA9100074918 /* DiscordKitGettingStarted */,
 				DA4BC3C12949AA9100074918 /* Products */,
 			);
@@ -61,7 +61,7 @@
 		DA4BC3C22949AA9100074918 /* DiscordKitGettingStarted */ = {
 			isa = PBXGroup;
 			children = (
-				DA4BC3C32949AA9100074918 /* main.swift */,
+				DA4BC3C32949AA9100074918 /* Bot.swift */,
 			);
 			path = DiscordKitGettingStarted;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4BC3C42949AA9100074918 /* main.swift in Sources */,
+				DA4BC3C42949AA9100074918 /* Bot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +139,7 @@
 /* Begin XCBuildConfiguration section */
 		DA4BC3C52949AA9100074918 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA4BC3CD2949F76900074918 /* DiscordToken.xcconfig */;
+			baseConfigurationReference = DA486922294ACCD000174D5F /* DiscordKitConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -200,7 +200,7 @@
 		};
 		DA4BC3C62949AA9100074918 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA4BC3CD2949F76900074918 /* DiscordToken.xcconfig */;
+			baseConfigurationReference = DA486922294ACCD000174D5F /* DiscordKitConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

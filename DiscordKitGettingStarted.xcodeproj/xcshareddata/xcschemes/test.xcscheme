@@ -51,6 +51,13 @@
             ReferencedContainer = "container:DiscordKitGettingStarted.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "DISCORD_TOKEN"
+            value = "$(TOKEN)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
