@@ -14,7 +14,10 @@ public struct Bot {
     static let bot = Client(intents: .unprivileged)
 
     public static func main() {
-        // This is your main function, which will be ran when your app starts
-        print("Hello world!")
+        // Login to Discord's API
+        bot.login()
+
+        // Run the main RunLoop to prevent the program from exiting
+        RunLoop.main.run()
     }
 }
