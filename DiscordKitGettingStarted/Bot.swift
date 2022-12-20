@@ -23,10 +23,16 @@ public struct Bot {
 
     private static func registerSlashCommands() async throws {
         try await bot.registerApplicationCommands(guild: ProcessInfo.processInfo.environment["COMMAND_GUILD_ID"]) {
-            NewAppCommand("hello", description: "Get a nice hello message") { interaction in
+            NewAppCommand("hello", description: "Get a nice hello message") {
+                StringOption("name", description: "Your beautiful name")
+            } handler: { interaction in
                 print("Received hello interaction!")
-                // Reply with a random hello message
-                try? await interaction.reply(HELLO_MESSAGES.randomElement()!)
+                if let name: String = interaction.optionValue(of: "name") {
+                    try? await interaction.reply("Hello \(name), hope you're having a wonderful day!")
+                } else {
+                    // Reply with a random hello message
+                    try? await interaction.reply(HELLO_MESSAGES.randomElement()!)
+                }
             }
         }
     }
